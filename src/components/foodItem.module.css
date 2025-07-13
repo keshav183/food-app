@@ -1,0 +1,36 @@
+.itemContainer {
+    width: 310px;
+    overflow :hidden;
+    font-family: cursive;
+    border-radius: 5px;
+    box-shadow: 0 0 3px;
+    color :rgb(230, 178, 178);
+    margin: 7px ;
+    border-style: none;
+}
+.image {
+    width: 100%;
+    height:auto;
+}
+.itemContext {
+    margin-left: 5px;
+    text-align: center;
+}
+.itemContextText {
+    font-family: cursive;
+    font-size: 1em;
+    font-weight: 600;
+}
+.buttonContainer {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-around;
+}
+.recButton {
+    background-color: rgb(201, 98, 119);
+    color:white;
+    border: none;
+    padding :10px;
+    font-size: 13px;
+    cursor: pointer;
+}

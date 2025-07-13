@@ -2,15 +2,22 @@ import { useState } from 'react'
 
 import './App.css'
 import Search from './components/search'
+import FoodList from './components/FoodList';
+import Nav from './components/Nav';
+import Container from './components/container.jsx';
+import InnerContainer from './components/InnerContainer';
 
 function App() {
   const [foodData,SetfoodData] = useState([]);
   return (
     <>
+      <Nav/>
       <Search foodData = {foodData} SetfoodData = {SetfoodData}/>
-      {foodData.map((food)=>{
-        return <h1>{food.title}</h1>
-  })}
+      <Container>
+        <InnerContainer>
+          <FoodList foodData = {foodData}/>
+        </InnerContainer>
+      </Container>
     </>
   )
 }
