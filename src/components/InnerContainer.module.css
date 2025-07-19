@@ -1,7 +1,8 @@
 .innerContainer {
-    
+   
     background-color: rgb(39, 35, 45);
-    flex:1;
-    padding: 10px;
+    
+    padding: 100px;
     margin:5px;
+    max-width: 50vw;
 }

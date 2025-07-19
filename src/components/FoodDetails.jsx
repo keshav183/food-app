@@ -11,8 +11,10 @@ const FoodDetails = ({foodID}) => {
     const res = await fetch(URL+"?apiKey="+API_KEY)
     const data = await res.json();
     Setfood(data);
-    console.log(data);}
+    console.log(data)
     setLoading(false)
+  }
+    
     fetchFood();
   },[foodID])
   return ( 
