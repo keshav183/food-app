@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import styles from './foodDetails.module.css'
 const FoodDetails = ({foodID}) => {
   const [food,Setfood] = useState([])
   const [isLoading,setLoading] = useState(true)
@@ -19,30 +19,40 @@ const FoodDetails = ({foodID}) => {
   },[foodID])
   return ( 
     <>
-    <div>Food Details {foodID}</div>
-    <div>
-      <h1>{food.title}</h1>
-      <img src={food.image} alt="" />
+    
+    <div className={styles.recipeCard}>
+     
+      <h1 className={styles.recipeName}>{food.title}</h1>
+      <img className={styles.recipeImg} src={food.image} alt="" />
     </div>
-
-    <span>
-      <strong>{food.readyInMinutes} Minutes </strong>
-    </span>
-    <span>
-      <strong>Serve : {food.servings}</strong>
-      </span>
-    <span>{food.vegetarian? " vegetarian":" non-veg"}</span>
-    <span>{food.vegan?" vegan": ""}</span>
+    <div className={styles.recipeDetails}>
+        <span>
+          <strong>{food.readyInMinutes} Minutes </strong>
+        </span>
+        <span>
+          <strong>Serve : {food.servings}</strong>
+          </span>
+        <span>{food.vegetarian? " vegetarian":" non-veg"}</span>
+        <span>{food.vegan?" vegan": ""}</span>
+    </div>
+   
     <div>
-      Rupees: <span>{food.pricePerServing}</span>
+      <strong>Cost: <span>₹{food.pricePerServing}</span></strong>
     </div>
     <div>
       <h2>Instructions :</h2> 
-      {isLoading?<p>Loading ...</p>:food.analyzedInstructions[0].steps.map((step)=>{
-        return<li>{step.step}</li>
-      })}
+      <div className={styles.recipeInstructions}>
+        <ol>
+        {isLoading?<p>Loading ...</p>:food.analyzedInstructions[0].steps.map((step)=>{
+          return<li>{step.step}</li>
+        })}
+        </ol>
+      
+      </div>
+      
       
     </div>
+   
     </>
     
     
