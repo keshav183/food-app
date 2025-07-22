@@ -40,11 +40,13 @@ const FoodDetails = ({foodID}) => {
       <strong>Cost: <span>₹{food.pricePerServing}</span></strong>
     </div>
     <div>
+       <h2>Ingredients</h2> 
+       {food.extendedIngredients.map((item)=>{return <div> <img src={`https://spoonacular.com/cdn/ingredients_100×100/`+ item.image}></img> <h3>{item.name}</h3> <h3>{item.amount} {item.unit}</h3></div>})}
       <h2>Instructions :</h2> 
       <div className={styles.recipeInstructions}>
         <ol>
         {isLoading?<p>Loading ...</p>:food.analyzedInstructions[0].steps.map((step)=>{
-          return<li>{step.step}</li>
+          return<li key={step.number}>{step.step}</li>
         })}
         </ol>
       
