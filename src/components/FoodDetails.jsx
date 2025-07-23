@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from './foodDetails.module.css'
+import ItemList from './ItemList'
 const FoodDetails = ({foodID}) => {
   const [food,Setfood] = useState([])
   const [isLoading,setLoading] = useState(true)
@@ -14,14 +15,11 @@ const FoodDetails = ({foodID}) => {
     console.log(data)
     setLoading(false)
   }
-    
     fetchFood();
   },[foodID])
   return ( 
     <>
-    
     <div className={styles.recipeCard}>
-     
       <h1 className={styles.recipeName}>{food.title}</h1>
       <img className={styles.recipeImg} src={food.image} alt="" />
     </div>
@@ -40,8 +38,7 @@ const FoodDetails = ({foodID}) => {
       <strong>Cost: <span>₹{food.pricePerServing}</span></strong>
     </div>
     <div>
-       <h2>Ingredients</h2> 
-       {food.extendedIngredients.map((item)=>{return <div> <img src={`https://spoonacular.com/cdn/ingredients_100×100/`+ item.image}></img> <h3>{item.name}</h3> <h3>{item.amount} {item.unit}</h3></div>})}
+       
       <h2>Instructions :</h2> 
       <div className={styles.recipeInstructions}>
         <ol>
@@ -51,13 +48,11 @@ const FoodDetails = ({foodID}) => {
         </ol>
       
       </div>
-      
-      
-    </div>
-   
+     
+      </div>
+      <ItemList food = {food} isLoading={isLoading}/>
     </>
-    
-    
+
   )
 }
 
