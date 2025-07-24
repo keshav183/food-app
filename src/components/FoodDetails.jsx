@@ -50,6 +50,7 @@ const FoodDetails = ({foodID}) => {
       </div>
      
       </div>
+      <h2>Ingredients</h2> 
       <ItemList food = {food} isLoading={isLoading}/>
     </>
 
