@@ -1,8 +1,8 @@
 .innerContainer {
    
+    flex: 1; /* each takes 50% of space inside flex container */
     background-color: rgb(39, 35, 45);
-    
     padding: 100px;
-    margin:5px;
-    max-width: 50vw;
+    margin: 5px;
+    box-sizing: border-box; /* ensures padding doesn't overflow */
 }

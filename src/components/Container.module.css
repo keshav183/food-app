@@ -1,5 +1,4 @@
 .parentContainer {
-    display:flex;
-    flex:1;
-    max-width: 100vw;
+    display: flex;
+    width: 100vw; /* full width of screen */
 }
