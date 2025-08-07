@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ff914d;
+    background-color: #49413d;
     padding: 15px 30px;
     font-family: 'Segoe UI', sans-serif;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 800;
   }
   
   .logo {

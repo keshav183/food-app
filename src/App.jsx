@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import Search from './components/search'
+import Search from './components/Search'
 import FoodList from './components/FoodList';
 import Nav from './components/Nav';
 import Container from './components/container.jsx';

@@ -7,7 +7,7 @@ export default function Search({foodData,SetfoodData}) {
     const [query,Setquery] = useState("pasta")
     useEffect(()=>{
        async function fetchFood() {
-           const res = await fetch(`${URL}?query=${query}&apiKey=${API_KEY}`)
+           const res = await fetch(`${URL}query=${query}&apiKey=${API_KEY}`)
            const data = await res.json()
            SetfoodData(data.results);
         } 
