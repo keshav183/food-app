@@ -5,7 +5,7 @@ import './App.css';
 import Search from './components/Search';
 import FoodList from './components/FoodList';
 import Nav from './components/Nav';
-import Container from './components/container.jsx';
+import Container from './components/Container.jsx';
 import InnerContainer from './components/InnerContainer';
 import FoodDetails from './components/FoodDetails.jsx';
 import About from './components/About'; 
